@@ -1,0 +1,29 @@
+---
+- hosts: Server-[A-G]
+  become: yes
+  pre_tasks:
+    - name: stop apache if exists
+      service: name=apache2 state=stopped
+    - name: apt update
+      apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+    - name: docker install
+      apt: name=docker.io state=latest
+    # - name: install pip for python3
+    #   apt: name=python3-pip state=absent
+    # installing docker-compose with apt went wrong first because of dependencies
+    - name: install pip for installing docker-compose
+      apt: name=python-pip-whl state=latest
+    # python-setup should be already installed
+    - name: python-setuptools install
+      apt: name=python-setuptools state=latest
+    - name: install python3-pip module
+      apt: name=python3-pip state=latest
+    - name: install docker module
+      pip: name=docker state=latest
+    # pip must be upgraded before docker-compose will be installed
+    - name: pip upgrade
+      pip: name=pip state=forcereinstall
+    - name: install docker-compose
+      pip: name=docker-compose state=latest
+  roles:
+    - ampache-docker

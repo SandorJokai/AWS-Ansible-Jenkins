@@ -1,0 +1,63 @@
+---
+- name: make workdir for ampache
+  file:
+    path: "{{ work_dir }}"
+    state: directory
+
+- name: copy files
+  copy:
+    src: "{{ files }}"
+    dest: "{{ work_dir }}"
+    mode: 0644
+
+- name: build image
+  docker_image:
+    name: music-streamer
+    build:
+      path: "{{ work_dir }}"
+    source: build
+- name: run ampache container with docker-compose
+  docker_compose:
+    project_name: music-streamer
+    definition:
+      version: '3'
+      services:
+        db:
+          image: mariadb:10
+          restart: always
+          volumes:
+            - "db:/var/lib/mysql"
+          environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: ampache
+            MYSQL_USER: ampache
+            MYSQL_PASSWORD: ampache
+        web:
+          image: music-streamer
+          restart: always
+          volumes:
+#            - "ampache:{{ work_dir }}"
+            - "ampache:/var/www/ampache"
+          ports:
+            - 80:80
+          depends_on:
+            - db
+      volumes:
+        db:
+        ampache:
+  register: output
+
+  # Here is debug when it's need, just do uncomment
+#- debug:
+#    var: output
+
+- name: make a workdir for musics
+  file:
+    path: "{{ musics_work_dir }}"
+    state: directory
+
+- name: copy a sample
+  copy:
+    src: "{{ sample }}"
+    dest: "{{ musics_work_dir }}"
+    mode: 0644
