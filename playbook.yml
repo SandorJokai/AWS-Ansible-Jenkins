@@ -1,5 +1,5 @@
 ---
-- hosts: Server-[A-G]
+- hosts: music-streamer
   become: yes
   pre_tasks:
     - name: stop apache if exists
