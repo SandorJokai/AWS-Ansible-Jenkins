@@ -103,7 +103,7 @@ Note: It is probably gonna take around 5 minutes until the ssh connection will b
 
 <h2>Create a job</h2>
   
-We almost done. Let's create a job, choose *pipeline*, click on *pipeline* and add the Jenkinsfile from [here](https://github.com/SandorJokai/AWS-Ansible-Jenkins/Jenkinsfile)
+We almost done. Let's create a job, choose *pipeline*, click on *pipeline* and add the Jenkinsfile from [here](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/Jenkinsfile)
   
 Don't forget to change the worker node's IP (music-streamer) in [dev.inv](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/dev.inv)
   
