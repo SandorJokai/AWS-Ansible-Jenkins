@@ -137,4 +137,11 @@ ansible music-streamer --private-key keyForSSH.pem -m ping
 ```
   
 It must be return with a green coloured message telling *"The connection is SUCCESS"*.
+  
+Once is done, build the pipeline finally.
 
+![npm package](https://img.shields.io/badge/ansible-2.9.20-black.svg)
+![npm package](https://img.shields.io/badge/python-2.7.18-turquoise.svg)
+![npm package](https://img.shields.io/badge/git-2.23.4-red.svg)
+![npm package](https://img.shields.io/badge/jenkins-2.289.1-purple.svg)
+![npm package](https://img.shields.io/badge/amazon-aws-yellow.svg)
