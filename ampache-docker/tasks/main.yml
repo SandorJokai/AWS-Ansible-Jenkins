@@ -6,7 +6,7 @@
 
 - name: copy files
   copy:
-    src: "/home/ec2-user/AWS-Ansible-Jenkins/ampache-docker/files/"
+    src: "{{ files }}"
     dest: "{{ work_dir }}"
     mode: 0644
 
