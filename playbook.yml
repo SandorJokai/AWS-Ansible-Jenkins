@@ -1,5 +1,5 @@
 ---
-- hosts: music-streamer
+- hosts: 172.31.7.17
   become: yes
   pre_tasks:
     - name: stop apache if exists
