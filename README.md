@@ -77,5 +77,21 @@ Finally create a cloud inside Jenkins:
   go to *manage jenkins* -> *configure system* and scroll all the way down. Here is some pictures to show how to create a cloud connection with jenkins:
   
   ![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/cloud-1.png)
+  To get *amazon EC2 credentials* just go to AWS console and click on *my security credentials* under the username and click on *create new keys*
+  
   ![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/cloud-2.png)
+  Choose *us-east-1* as default and the private key is the one which might be dowloaded already. (*as the last process of launching an EC2*)
+  Choose an AMI ID which is Ubuntu 20.04 LTS in my case. (That is going to be the ansible node as well as the music-streamer server ultimately)
+  
   ![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/cloud-3.png)
+  Note there *T2 micro* has choosen. Make sure this must be chosen as it is eligible for free tier.
+  Add some more parameters, choose Unix as AMI type where sudo is the *root command prefix * and 22 is the port number.
+  Idle termination time is 30 minutes as default, which means the server will be terminated after 30 minutes idle.
+  
+  let's put some init script in order to work with the Jenkisnfile later on:
+  
+apt update
+apt install apache2 -y
+apt install openjdk-8-jre -y
+  
+  Note: there is no need to initialize with *#!/bin/bash* at beginning.
