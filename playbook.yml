@@ -1,6 +1,6 @@
 ---
 - hosts: music-streamer
-  become: yes
+  become: True
   pre_tasks:
     - name: stop apache if exists
       service: name=apache2 state=stopped
