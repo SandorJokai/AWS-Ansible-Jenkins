@@ -81,6 +81,7 @@ Finally create a cloud inside Jenkins:
   
   ![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/cloud-2.png)
   Choose *us-east-1* as default and the private key is the one which might be dowloaded already. (*as the last process of launching an EC2*)
+  Here is it in ma case: [Private key](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/keyForSSH.pem)
   Choose an AMI ID which is Ubuntu 20.04 LTS in my case. (That is going to be the ansible node as well as the music-streamer server ultimately)
   
   ![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/cloud-3.png)
