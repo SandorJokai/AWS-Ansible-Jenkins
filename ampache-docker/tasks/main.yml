@@ -5,7 +5,7 @@
     state: directory
 
 - name: copy files
-  copy:
+  ansible.builtin.copy:
     src: "{{ files }}"
     dest: "{{ work_dir }}"
     owner: ubuntu
