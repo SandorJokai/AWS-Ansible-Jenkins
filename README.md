@@ -88,10 +88,10 @@ Finally create a cloud inside Jenkins:
   Add some more parameters, choose Unix as AMI type where sudo is the *root command prefix* and 22 is the port number.
   *Idle termination time* is 30 minutes as default, which means the server will be terminated after 30 minutes idle.
   
-  let's put some init script in order to work with the Jenkisnfile later on:
+  let's put some init script in order to work with the Jenkinsfile later on:
   
-apt update
-apt install apache2 -y
-apt install openjdk-8-jre -y
+- apt update
+- apt install apache2 -y
+- apt install openjdk-8-jre -y
   
   Note: there is no need to initialize with *#!/bin/bash* at beginning.
