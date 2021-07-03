@@ -90,8 +90,8 @@ Finally create a cloud inside Jenkins:
   
   let's put some init script in order to work with the Jenkinsfile later on:
   
-- apt update
-- apt install apache2 -y
-- apt install openjdk-8-jre -y
+  apt update\
+  apt install apache2 -y\
+  apt install openjdk-8-jre -y
   
-  Note: there is no need to initialize with *#!/bin/bash* at beginning.
+Note: there is no need to initialize with *#!/bin/bash* at beginning.
