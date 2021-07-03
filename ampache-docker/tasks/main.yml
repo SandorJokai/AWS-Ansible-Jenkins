@@ -6,7 +6,7 @@
 
 - name: copy files
   copy:
-    src: "/tmp/files"
+    src: "/tmp/files/"
     dest: "{{ work_dir }}"
     owner: ubuntu
     group: ubuntu
