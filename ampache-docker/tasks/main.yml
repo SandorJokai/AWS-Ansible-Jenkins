@@ -8,6 +8,8 @@
   copy:
     src: "{{ files }}"
     dest: "{{ work_dir }}"
+    owner: ubuntu
+    group: ubuntu
     mode: 0644
 
 - name: build image
