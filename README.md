@@ -1,3 +1,9 @@
+![npm package](https://img.shields.io/badge/ansible-2.9.20-black.svg)
+![npm package](https://img.shields.io/badge/python-2.7.18-turquoise.svg)
+![npm package](https://img.shields.io/badge/git-2.23.4-red.svg)
+![npm package](https://img.shields.io/badge/jenkins-2.289.1-purple.svg)
+![npm package](https://img.shields.io/badge/amazon-aws-yellow.svg)
+
 <h2>Introducing the project</h2>
 
 Here is another nice combination of my favourite tools, AWS, Ansible and Jenkins. In this case, once we launched an EC2 instance from AWS (that is going to be the Ansible controller as well as the Jenkins server) and make some settings, a fully CI/CD pipeline will be created demonstrated the Open source music-streamer provided by Ampache.
@@ -27,4 +33,30 @@ sudo systemctl daemon-reload
 sudo systemctl start --now jenkins
 ```
   
-Now the Jenkins is up and running. 
+Now the Jenkins is up and running. Let's continue with ansible installation.
+
+<h2>Install Ansible</h2>
+There is a repository provided by Amazon Linux, where we can install:
+  
+  ```bash
+  sudo amazon-linux-extras install ansible2
+  ```
+Once we done that, let's check the current version of ansible:
+  ```bash
+  ansible --version
+  ```
+It also returns with the version of python as well as some other informations.
+Now it is time to care for post-installation of Jenkins...
+  
+<h2>Jenkins Post-installation</h2>
+  
+Once we logged in with typing <Public-IP-Address:8080> grab the initial admin password from here:
+  ```bash
+  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+  ```
+  
+Paste it to the appropriate place and customize the Jenkins.
+  
+<h2>Required plugins</h2>
+  
+We also need to download some additional plugins:
