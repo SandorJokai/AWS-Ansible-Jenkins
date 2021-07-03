@@ -144,6 +144,16 @@ ansible music-streamer --private-key keyForSSH.pem -m ping
 It must be return with a green coloured message telling *"The connection is SUCCESS"*.
   
 Once is done, build the pipeline finally.
+  
+<h2>Post-installations on ampache</h2>
+  
+  
+Leave everything as it is, except this page:
+![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/ampache.png
+
+where *mysql hostname* is *"db"* and the username as well as the password is *ampache* according to [playbook.yml]' settings(https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/ampache-docker/tasks/main.yml)
+  
+That's it, enjoy!
 
 ![npm package](https://img.shields.io/badge/ansible-2.9.20-black.svg)
 ![npm package](https://img.shields.io/badge/python-2.7.18-turquoise.svg)
