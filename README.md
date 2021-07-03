@@ -131,6 +131,10 @@ sudo vi /etc/ansible/hosts
 music-streamer ansible_host=172.31.*.* ansible_port=22 ansible_user=ubuntu
 ```
 Note that *ansible_host* must be changed.
+```bash
+sftp -i keyForSSH.pem ec2-user@\<Public-IP-Address>
+```
+Let's put some music into /tmp/jenkins
   
 Let's check the connection finally:
 ```bash
