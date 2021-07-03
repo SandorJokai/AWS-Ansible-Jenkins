@@ -46,6 +46,11 @@ Once we done that, let's check the current version of ansible:
   ansible --version
   ```
 It also returns with the version of python as well as some other informations.
+  
+Finally, install git as well:
+  ```bash
+  sudo yum install git
+  ```
 Now it is time to care for post-installation of Jenkins...
   
 <h2>Jenkins Post-installation</h2>
@@ -60,3 +65,15 @@ Paste it to the appropriate place and customize the Jenkins.
 <h2>Required plugins</h2>
   
 We also need to download some additional plugins:
+  
+  - Amazon Web Services SDK
+  - Amazon EC2
+  - CloudBees AWS Credentials (for storing amazon IAM credentials)
+  - ansible
+  
+go to *manage jenkins* -> *global tool configuration* and place *"/usr/bin"* to git and ansible.
+  
+Finally create a cloud inside Jenkins:
+  go to *manage jenkins* -> *configure system* and scroll all the way down. Here is some pictures to show how to create a cloud connection with jenkins:
+  
+  ![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/cloud-1.png)
