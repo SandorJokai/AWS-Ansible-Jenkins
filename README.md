@@ -149,9 +149,9 @@ Once is done, build the pipeline finally.
   
   
 Leave everything as it is, except this page:
-![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/ampache.png
+![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/ampache.png)
 
-where *mysql hostname* is *"db"* and the username as well as the password is *ampache* according to [playbook.yml]' settings(https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/ampache-docker/tasks/main.yml)
+where *mysql hostname* is *"db"* and the username as well as the password is *ampache* according to [playbook.yml](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/ampache-docker/tasks/main.yml)' settings.
   
 That's it, enjoy!
 
