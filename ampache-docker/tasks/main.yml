@@ -5,7 +5,7 @@
     state: directory
 
 - name: copy files
-  ansible.builtin.copy:
+  copy:
     src: "{{ files }}"
     dest: "{{ work_dir }}"
     mode: 0644
