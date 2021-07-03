@@ -8,8 +8,6 @@
   copy:
     src: "/tmp/files/"
     dest: "{{ work_dir }}"
-    owner: ubuntu
-    group: ubuntu
     mode: 0644
 
 - name: build image
@@ -53,13 +51,13 @@
 #- debug:
 #    var: output
 
-- name: make a workdir for musics
-  file:
-    path: "{{ musics_work_dir }}"
-    state: directory
+#- name: make a workdir for musics
+#  file:
+#    path: "{{ musics_work_dir }}"
+#    state: directory
 
-- name: copy a sample
-  copy:
-    src: "{{ sample }}"
-    dest: "{{ musics_work_dir }}"
-    mode: 0644
+#- name: copy a sample
+#  copy:
+#    src: "{{ sample }}"
+#    dest: "{{ musics_work_dir }}"
+#    mode: 0644
