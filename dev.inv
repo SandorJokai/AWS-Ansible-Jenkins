@@ -1,2 +1,2 @@
 [music-streamer]
-172.31.55.74 ansible_user=ubuntu
+172.31.1.255 ansible_user=ubuntu
