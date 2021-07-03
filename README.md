@@ -55,7 +55,7 @@ Now it is time to care for post-installation of Jenkins...
   
 <h2>Jenkins Post-installation</h2>
   
-Once we logged in with typing <Public-IP-Address:8080> grab the initial admin password from here:
+Once we logged in with typing \<Public-IP-Address:8080>\ grab the initial admin password from here:
   ```bash
   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
   ```
@@ -71,7 +71,7 @@ We also need to download some additional plugins:
   - CloudBees AWS Credentials (for storing amazon IAM credentials)
   - ansible
   
-go to *manage jenkins* -> *global tool configuration* and place *"/usr/bin"* to git and ansible.
+go to *manage jenkins* -> *global tool configuration* and place *"/usr/bin"* to ansible and *git* to git.
   
 Finally create a cloud inside Jenkins:
   go to *manage jenkins* -> *configure system* and scroll all the way down. Here is some pictures to show how to create a cloud connection with jenkins:
@@ -95,3 +95,46 @@ Finally create a cloud inside Jenkins:
   apt install openjdk-8-jre -y
   
 Note: there is no need to initialize with *#!/bin/bash* at beginning.
+  
+Click on *Advanced...* under the script field and choose 1 at *Minimum number of instances*. As result, one EC2 instance will be created automatically by these configurations. To check go to *manage jenkins* -> *manage nodes and clouds*.
+  
+Note: It is probably gonna take around 5 minutes until the ssh connection will be established. Wait for that, no rush... We can check the log when it's done anyway.
+
+<h2>Create a job</h2>
+  
+We almost done. Let's create a job, choose *pipeline*, click on *pipeline* and add the Jenkinsfile from [here](https://github.com/SandorJokai/AWS-Ansible-Jenkins/Jenkinsfile)
+  
+Don't forget to change the worker node's IP (music-streamer) in [dev.inv](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/dev.inv)
+  
+Now let's jump into Jenkins-Ansible server via ssh and execute these commands:
+  
+```bash
+mkdir /tmp/jenkins
+```
+```bash
+cd /tmp/jenkins
+```
+```bash
+git init
+```
+```bash
+git pull https://github.com/SandorJokai/AWS-Ansible-Jenkins
+```
+```bash
+chmod 400 keyForSSH.pem
+```
+```bash
+sudo vi /etc/ansible/hosts
+```
+```bash
+music-streamer ansible_host=172.31.*.* ansible_port=22 ansible_user=ubuntu
+```
+Note that *ansible_host* must be changed.
+  
+Let's check the connection finally:
+```bash
+ansible music-streamer --private-key keyForSSH.pem -m ping
+```
+  
+It must be return with a green coloured message telling *"The connection is SUCCESS"*.
+
