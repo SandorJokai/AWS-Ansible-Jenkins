@@ -76,4 +76,6 @@ go to *manage jenkins* -> *global tool configuration* and place *"/usr/bin"* to 
 Finally create a cloud inside Jenkins:
   go to *manage jenkins* -> *configure system* and scroll all the way down. Here is some pictures to show how to create a cloud connection with jenkins:
   
-  ![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/cloud-1.png)
+  ![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/cloud-1.png)
+  ![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/cloud-2.png)
+  ![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/cloud-3.png)
