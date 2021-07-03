@@ -85,8 +85,8 @@ Finally create a cloud inside Jenkins:
   
   ![Image of mysql](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/cloud-3.png)
   Note there *T2 micro* has choosen. Make sure this must be chosen as it is eligible for free tier.
-  Add some more parameters, choose Unix as AMI type where sudo is the *root command prefix * and 22 is the port number.
-  Idle termination time is 30 minutes as default, which means the server will be terminated after 30 minutes idle.
+  Add some more parameters, choose Unix as AMI type where sudo is the *root command prefix* and 22 is the port number.
+  *Idle termination time* is 30 minutes as default, which means the server will be terminated after 30 minutes idle.
   
   let's put some init script in order to work with the Jenkisnfile later on:
   
