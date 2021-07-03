@@ -55,7 +55,7 @@ Now it is time to care for post-installation of Jenkins...
   
 <h2>Jenkins Post-installation</h2>
   
-Once we logged in with typing \<Public-IP-Address:8080>\ grab the initial admin password from here:
+Once we logged in with typing \<Public-IP-Address:8080> grab the initial admin password from here:
   ```bash
   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
   ```
