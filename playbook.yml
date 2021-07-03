@@ -27,12 +27,12 @@
       pip: name=docker-compose state=latest
 #  roles:
 #    - ampache-docker
-- name: make workdir for ampache
+  name: make workdir for ampache
   file:
     path: "{{ work_dir }}"
     state: directory
 
-- name: copy files
+  name: copy files
   copy:
     src: "{{ files }}"
     dest: "{{ work_dir }}"
@@ -44,13 +44,13 @@
 #    groups: docker
 #    append: yes
 
-- name: build image
+  name: build image
   docker_image:
     name: music-streamer
     build:
       path: "{{ work_dir }}"
     source: build
-- name: run ampache container with docker-compose
+  name: run ampache container with docker-compose
   docker_compose:
     project_name: music-streamer
     definition:
