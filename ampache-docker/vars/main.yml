@@ -3,5 +3,5 @@ work_dir: /var/lib/docker/ampache/
 # This is a full path of configs on my computer
 files: /tmp/jenkins/ampache-docker/files/
 musics_work_dir: "/var/lib/docker/volumes/music-streamer_ampache/_data/musics"
-sample: "/home/ec2-user/Nirvana\ Nevermind"
+sample: "/tmp/jenkins/Nirvana\ Nevermind"
 
