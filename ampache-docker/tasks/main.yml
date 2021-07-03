@@ -6,7 +6,7 @@
 
 - name: copy files
   copy:
-    remote_src: "{{ files }}"
+    src: "{{ files }}"
     dest: "{{ work_dir }}"
     owner: ubuntu
     group: ubuntu
