@@ -71,7 +71,7 @@ We also need to download some additional plugins:
   - CloudBees AWS Credentials (for storing amazon IAM credentials)
   - ansible
   
-go to *manage jenkins* -> *global tool configuration* and place *"/usr/bin"* to ansible and *git* to git.
+go to *manage jenkins* -> *global tool configuration* and place *"/usr/bin"* to ansible and *"git"* to git.
   
 Finally create a cloud inside Jenkins:
   go to *manage jenkins* -> *configure system* and scroll all the way down. Here is some pictures to show how to create a cloud connection with jenkins:
