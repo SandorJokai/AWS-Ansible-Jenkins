@@ -1,6 +1,3 @@
----
-become: True
-  
 - name: make workdir for ampache
   file:
     path: "{{ work_dir }}"
