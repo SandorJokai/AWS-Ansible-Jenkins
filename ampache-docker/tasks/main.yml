@@ -1,6 +1,5 @@
 ---
-- hosts: music-streamer
-  become: True
+become: True
   
 - name: make workdir for ampache
   file:
