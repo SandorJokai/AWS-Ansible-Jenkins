@@ -1,2 +1,2 @@
 [music-streamer]
-172.31.6.167 ansible_user=ubuntu
+172.31.6.167 ansible_user=root
