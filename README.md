@@ -134,7 +134,8 @@ Note that *ansible_host* must be changed.
 ```bash
 sftp -i keyForSSH.pem ec2-user@<Public-IP-Address>:/tmp/jenkins
 ```
-Let's put some music into /tmp/jenkins
+Let's put some music into /tmp/jenkins\
+Don't forget to change the path in sample in [vars](https://github.com/SandorJokai/AWS-Ansible-Jenkins/blob/master/ampache-docker/vars/main.yml)
   
 Let's check the connection finally:
 ```bash
