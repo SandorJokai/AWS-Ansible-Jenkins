@@ -10,11 +10,11 @@
     dest: "{{ work_dir }}"
     mode: 0644
     
- - name: usermod
-   user:
-     name: ubuntu
-     groups: docker
-     append: yes
+- name: usermod
+  user:
+    name: ubuntu
+    groups: docker
+    append: yes
 
 - name: build image
   docker_image:
