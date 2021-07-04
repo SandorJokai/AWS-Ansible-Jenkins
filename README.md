@@ -6,7 +6,7 @@
 
 <h2>Introducing the project</h2>
 
-Here is another nice combination of my favourite tools, AWS, Ansible and Jenkins. In this case, once we launched an EC2 instance from AWS (that is going to be the Ansible controller as well as the Jenkins server) and make some settings on it, a fully CI/CD pipeline will be created demonstrated the Open source music-streamer provided by Ampache.
+Here is another nice combination of my favourite tools, AWS, Ansible and Jenkins working together. In this case, once we launched an EC2 instance from AWS (that is going to be the Ansible controller as well as the Jenkins server) and make some settings on it, a fully CI/CD pipeline will be created demonstrated the Open source music-streamer provided by Ampache.
 
 <Preparations>
   
